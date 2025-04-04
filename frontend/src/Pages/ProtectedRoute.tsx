@@ -7,10 +7,10 @@ const ProtectedRoute = ({ children }:any) => {
     const [user, loading] = useAuthState(auth);
     const navigate = useNavigate()
   
-    if (loading) return <p>Loading...</p>; // Optional loading state
+    if (loading) return <p>Loading...</p>; 
     if (!user){
         navigate("/login")
-    }  // Redirect if not logged in
+    } 
   
     return children;
   };

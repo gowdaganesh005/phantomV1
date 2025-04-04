@@ -38,7 +38,7 @@ export function Summary() {
     }, [videoId]);
 
     const parseXML = (xmlString: string | null) => {
-        if (!xmlString) return { sections: [], todos: [] }; // Prevents null/undefined issues
+        if (!xmlString) return { sections: [], todos: [] }; 
     
         const headingRegex = /<heading>(.*?)<\/heading>/gs;
         const textRegex = /<text>(.*?)<\/text>/gs;
