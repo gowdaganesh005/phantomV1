@@ -161,17 +161,16 @@ async function getDriver() {
     options.addArguments("--use-fake-ui-for-media-stream");
     options.addArguments("--enable-user-media-screen-capture");
     
-    // Firefox preferences for media handling
     options.setPreference("dom.webdriver.enabled", false);
     options.setPreference("useAutomationExtension", false);
     options.setPreference("media.navigator.streams.fake", true);
     options.setPreference("media.navigator.permission.disabled", true);
-    options.setPreference("permissions.default.microphone", 1); // 0=ask, 1=allow, 2=deny
+    options.setPreference("permissions.default.microphone", 1); 
     options.setPreference("permissions.default.camera", 1);
     options.setPreference("permissions.default.screen", 1);
     options.setPreference("media.getusermedia.screensharing.enabled", true);
     options.setPreference("media.getusermedia.screensharing.allowed_domains", "*");
-    options.setPreference("media.autoplay.default", 0); // 0=allowed, 1=blocked, 2=prompt
+    options.setPreference("media.autoplay.default", 0); 
     options.setPreference("media.autoplay.blocking_policy", 0);
     options.setPreference("media.navigator.video.enabled", true);
     
